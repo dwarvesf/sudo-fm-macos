@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MoodViewController" customModule="sudofm" customModuleProvider="target">
+            <connections>
+                <outlet property="btnToggleMood" destination="zbm-8F-c9u" id="VWM-aV-xoH"/>
+                <outlet property="imgViewMoodIco" destination="OOp-ID-siu" id="mqY-wT-XeD"/>
+                <outlet property="imgViewOverlay" destination="smc-6a-8Vv" id="ngs-Wh-wDp"/>
+                <outlet property="lblMoodName" destination="WjY-8W-hox" id="Hdv-UX-bVQ"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="viewOverlay" destination="zSM-1c-pnx" id="pVg-d1-XSj"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView distribution="equalCentering" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTq-3z-qwE">
+                    <rect key="frame" x="40" y="33" width="34" height="48"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OOp-ID-siu">
+                            <rect key="frame" x="5" y="24" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="FcR-0i-lp2"/>
+                                <constraint firstAttribute="width" constant="24" id="oXe-U4-ssz"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_work" id="MMH-3d-vnO"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WjY-8W-hox">
+                            <rect key="frame" x="-2" y="0.0" width="38" height="16"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Code" id="LmS-Zp-YUR">
+                                <font key="font" metaFont="systemBold"/>
+                                <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <customView id="zSM-1c-pnx" userLabel="Overlay View">
+                    <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="smc-6a-8Vv">
+                            <rect key="frame" x="39" y="39" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="TC7-Cb-TGJ"/>
+                                <constraint firstAttribute="height" constant="36" id="fns-sC-zc8"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_play_mood" id="7hZ-ZX-EJz"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="smc-6a-8Vv" firstAttribute="centerY" secondItem="zSM-1c-pnx" secondAttribute="centerY" id="Qhz-TV-kdj"/>
+                        <constraint firstItem="smc-6a-8Vv" firstAttribute="centerX" secondItem="zSM-1c-pnx" secondAttribute="centerX" id="ZzH-HI-8Yt"/>
+                    </constraints>
+                </customView>
+                <button verticalHuggingPriority="750" id="zbm-8F-c9u">
+                    <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="bhB-uY-xAy">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="selectMood:" target="-2" id="n8l-y3-tgK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="69.5" y="-49.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="ico_play_mood" width="32" height="32"/>
+        <image name="ico_work" width="24" height="24"/>
+    </resources>
+</document>

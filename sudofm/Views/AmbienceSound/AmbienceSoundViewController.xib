@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AmbienceSoundViewController" customModule="Sudo_fm" customModuleProvider="target">
+            <connections>
+                <outlet property="animationViewSound" destination="zc0-5s-qqK" id="fYT-y7-Ph3"/>
+                <outlet property="btnAction" destination="LPA-BF-18Q" id="3Rz-vT-2kN"/>
+                <outlet property="imgViewIcon" destination="6Mj-UL-TtP" id="YUE-ki-dJF"/>
+                <outlet property="lblTitle" destination="6PB-LD-PLS" id="6AC-d2-H99"/>
+                <outlet property="lblVolumn" destination="wV1-fK-Fzp" id="Y6h-Ho-h8n"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="114" height="88"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wV1-fK-Fzp" userLabel="lblVolume">
+                    <rect key="frame" x="-2" y="17" width="118" height="14"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="50%" id="BOy-7x-zNE">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6PB-LD-PLS" userLabel="lblTitle">
+                    <rect key="frame" x="-2" y="37" width="118" height="14"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Coffee House" id="3gl-g7-k0e">
+                        <font key="font" metaFont="message" size="11"/>
+                        <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Mj-UL-TtP">
+                    <rect key="frame" x="45" y="57" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="16g-BN-niZ"/>
+                        <constraint firstAttribute="height" constant="25" id="lXZ-bM-phZ"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_coffee" id="t74-Ad-kHP"/>
+                </imageView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zc0-5s-qqK" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="45" y="57" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </customView>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="LPA-BF-18Q" customClass="CustomButton" customModule="Sudo_fm" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="114" height="88"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="HzT-mf-4s1">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="toggleSound:" target="-2" id="Lht-eQ-89q"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="LPA-BF-18Q" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="1IY-Ut-9HH"/>
+                <constraint firstItem="6Mj-UL-TtP" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="39U-1W-0RA"/>
+                <constraint firstItem="wV1-fK-Fzp" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="5zc-mK-B7p"/>
+                <constraint firstItem="6PB-LD-PLS" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="D7B-z8-cH7"/>
+                <constraint firstItem="wV1-fK-Fzp" firstAttribute="top" secondItem="6PB-LD-PLS" secondAttribute="bottom" constant="6" id="DpH-Si-Lr7"/>
+                <constraint firstAttribute="trailing" secondItem="6PB-LD-PLS" secondAttribute="trailing" id="FcM-ZQ-ZYB"/>
+                <constraint firstItem="LPA-BF-18Q" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="TlR-B7-9Xf"/>
+                <constraint firstAttribute="trailing" secondItem="LPA-BF-18Q" secondAttribute="trailing" id="WcH-xX-Psl"/>
+                <constraint firstItem="6PB-LD-PLS" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Wfi-mu-uUp"/>
+                <constraint firstAttribute="trailing" secondItem="wV1-fK-Fzp" secondAttribute="trailing" id="dHz-yZ-MV5"/>
+                <constraint firstAttribute="bottom" secondItem="LPA-BF-18Q" secondAttribute="bottom" id="i9D-Pq-AvW"/>
+                <constraint firstItem="6PB-LD-PLS" firstAttribute="top" secondItem="6Mj-UL-TtP" secondAttribute="bottom" constant="6" id="jN6-Vl-l8J"/>
+                <constraint firstItem="6PB-LD-PLS" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="xKP-by-fMT"/>
+            </constraints>
+            <point key="canvasLocation" x="-100" y="177"/>
+        </customView>
+        <customView id="GNa-qi-aBj" userLabel="Backup">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="JBd-91-Hsh" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="0.0" y="30" width="80" height="70"/>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="N8a-wq-5GA">
+                    <rect key="frame" x="6" y="8" width="68" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="T48-9w-NRB"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="50" id="gLq-ak-VqD">
+                        <font key="font" metaFont="systemBold" size="19"/>
+                        <color key="textColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="ZTs-hl-yzx" customClass="CustomButton" customModule="Sudo_fm" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="yKy-Nj-9Y4">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="toggleSound:" target="-2" id="xqP-3G-F2T"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="N8a-wq-5GA" firstAttribute="top" secondItem="JBd-91-Hsh" secondAttribute="bottom" id="34T-cR-7kV"/>
+                <constraint firstItem="ZTs-hl-yzx" firstAttribute="top" secondItem="GNa-qi-aBj" secondAttribute="top" id="35Y-Hg-fr2"/>
+                <constraint firstItem="JBd-91-Hsh" firstAttribute="leading" secondItem="GNa-qi-aBj" secondAttribute="leading" id="EAB-TI-eBl"/>
+                <constraint firstItem="ZTs-hl-yzx" firstAttribute="leading" secondItem="GNa-qi-aBj" secondAttribute="leading" id="Fhm-BZ-9ze"/>
+                <constraint firstItem="JBd-91-Hsh" firstAttribute="top" secondItem="GNa-qi-aBj" secondAttribute="top" id="PW8-UL-G1a"/>
+                <constraint firstItem="N8a-wq-5GA" firstAttribute="leading" secondItem="GNa-qi-aBj" secondAttribute="leading" constant="8" id="PzS-f4-4DL"/>
+                <constraint firstAttribute="bottom" secondItem="N8a-wq-5GA" secondAttribute="bottom" constant="8" id="Y6C-jC-kSl"/>
+                <constraint firstAttribute="trailing" secondItem="JBd-91-Hsh" secondAttribute="trailing" id="ZJc-La-VQB"/>
+                <constraint firstAttribute="trailing" secondItem="ZTs-hl-yzx" secondAttribute="trailing" id="crB-y2-Dpj"/>
+                <constraint firstAttribute="bottom" secondItem="ZTs-hl-yzx" secondAttribute="bottom" id="oS8-Vh-xwR"/>
+                <constraint firstAttribute="trailing" secondItem="N8a-wq-5GA" secondAttribute="trailing" constant="8" id="qUI-Ct-cPK"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="177"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="ico_coffee" width="25" height="25"/>
+    </resources>
+</document>
